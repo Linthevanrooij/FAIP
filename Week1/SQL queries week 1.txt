@@ -1,0 +1,44 @@
+“
+5.1:
+SELECT title, kind_id 
+FROM title_100k 
+WHERE title = 'The Matrix' 
+AND kind_id = '1';
+
+5.2:
+SELECT * 
+FROM title_100k as t 
+JOIN cast_info_100k as c ON t.id = c.movie_id
+JOIN person_100k as p ON c.person_id = p.id
+WHERE title = 'The Matrix' AND kind_id = 1;
+
+5.3:
+SELECT p.name, cn.name
+FROM title_100k as t 
+JOIN cast_info_100k as c ON t.id = c.movie_id
+JOIN person_100k as p ON c.person_id = p.id
+JOIN char_name_100k as cn ON c.person_role_id = cn.id
+WHERE title = 'The Matrix' AND kind_id = 1
+ORDER BY c.nr_order ASC;
+
+5.4:
+SELECT p.name, cn.name, r.role
+FROM title_100k as t 
+JOIN cast_info_100k as c ON t.id = c.movie_id
+JOIN person_100k as p ON c.person_id = p.id
+FULL OUTER JOIN char_name_100k as cn ON c.person_role_id = cn.id
+JOIN role_type as r ON c.role_id = r.id
+WHERE title = 'The Matrix' AND kind_id = 1
+ORDER BY c.nr_order ASC;
+
+5.5:
+SELECT r.role, COUNT(r.id)
+FROM title_100k as t 
+JOIN cast_info_100k as c ON t.id = c.movie_id
+JOIN person_100k as p ON c.person_id = p.id
+FULL OUTER JOIN char_name_100k as cn ON c.person_role_id = cn.id
+JOIN role_type as r ON c.role_id = r.id
+WHERE title = 'The Matrix' AND kind_id = 1
+GROUP BY r.role
+ORDER BY COUNT(r.id) DESC;
+”
