@@ -47,4 +47,12 @@ Discussion points
     - The dimensions of the data are very different than our previously trained model 
 - Llama2 is not generating images, only text. We got the text word relations working. Combination of this and Stable diffusion works in seperate notebooks. 
 
+For the following weeks:
+- either clean the code that we already have to only what we need OR get another dataset and model to have different emotions based on Valence/Arousal
+- get predictions of the model
+- put that prediction in Llama2 to get list of related words
+- From the list of words
+    - put this into stable diffusion to create image out of the related words of the emotion
+    - Put the list of words back in LLama2 to create a conversation about these related words
+
 
