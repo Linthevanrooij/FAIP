@@ -55,4 +55,44 @@ For the following weeks:
     - put this into stable diffusion to create image out of the related words of the emotion
     - Put the list of words back in LLama2 to create a conversation about these related words
 
+# Week 6
+_Midterm presentation (18-Oct-2024)_
+
+Feedback
+- Lack of clear problem statement 
+- Lack of ethics consideration 
+- Choose 1 data set and model, not different datasets to compare with different models
+
+# Week 7
+_Meeting 6 (22-Oct-2024)_
+
+We discussed a clear plan for the coming 3 weeks. The outline of the project will be as follows: 
+
+**Problem statement**: Can EEG be used as input for generative models such as text and image models to generate emotion-guided/ emotion-sensitive outputs? 
+
+**Hypothesis**: Emotion-sensitive outputs can be created with a generative model using EEG input. 
+
+**Application**: We use design as a tool to test this hypothesis, because emotions are involved in opinions about design. The project will be a proof of concept to test if this can be applied. 
+
+1. Read dataset DEAP (EEG dataset with corresponding valence, arousal labels)
+2. Regression model to get arousal and valence scales
+3. Get two predictions with varying arousal and valence scores 
+4. From [this outline on empathetic prompting ](https://arteliers.notion.site/Empathetic-Prompting-POC-12749f16dd2980cda39cf574e3a0dca0), use the basline/ neutral prompt. 
+5. Create 3 different images with Stable Diffusion 
+    - One baseline image (baseline prompt)
+    - One that can be categorized in the "positive" field of valence/arousal 
+    - One that can be categorized in the "negative" field of valence/arousal 
+6. Create 3 different design briefs corresponding to the 3 categories  
+7. Test with a sentiment analysis tool to test if the design briefs correctly represent the emotion specified 
+8. Test with a user study how the images and descriptions are classified
+9. Compare these results to the actual EEG data labels and test if they are the same (statistical analysis)
+
+Conclusion will provide insight if EEG data predictions from the ML model can be a valuable asset for generative models to incorporate emotion into the translation to perception. 
+
+**Experimental design** 
+- Include different theories from crowdsourcing design 
+- Inlcude emotion scale categories (maybe some grid)
+- Analysis: 
+    - check if they differ from the baseline 
+    - check if they significantly differ from original labels
 
