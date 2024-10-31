@@ -84,7 +84,7 @@ We discussed a clear plan for the coming 3 weeks. The outline of the project wil
     - One that can be categorized in the "negative" field of valence/arousal 
 6. Create 3 different design briefs corresponding to the 3 categories  
 7. Test with a sentiment analysis tool to test if the design briefs correctly represent the emotion specified 
-8. Test with a user study how the images and descriptions are classified
+8. Test with a user study how the images are classified
 9. Compare these results to the actual EEG data labels and test if they are the same (statistical analysis)
 
 Conclusion will provide insight if EEG data predictions from the ML model can be a valuable asset for generative models to incorporate emotion into the translation to perception. 
@@ -96,3 +96,66 @@ Conclusion will provide insight if EEG data predictions from the ML model can be
     - check if they differ from the baseline 
     - check if they significantly differ from original labels
 
+# week 8
+
+We worked on the model, and experimental design and the report. 
+
+*Model*
+Regression showed some pretty low accuracy, so its better to use classification. 
+Classification with either 4 or 9 categories. 9 categories has lower accuracy. 
+KNN, CNN and NN -> neural network shows best in 4 categories while KNN shows best in 4 categories. 
+Hyperparameter tuning, layers can improve accuracy
+
+*Experimental design*
+- We decided to only show the participants the images and only feed the generated text into a text sentiment analysis tool. 
+- Text to sentiment tool that predicts a valence and arousal score 
+- Include demographics: gender and age 
+- Statistical analysis 
+    - either 1 emotion pair per category troughout all the stages 
+    - or different emotions among all stages and categories. 
+    - or for each different classification (9) a seperate emotion
+- statistical tests: 
+    - Anova for comparing group results among categories 
+    - one sample t-test for comparing rating with predicted valence and arousal scores. 
+        - if same emotion for all stages for 3 categories: 6 p-vales. 
+        - if different emotions pairs: 30 p-values. 
+        - if 9 seperate categories, 2 valence arousal among 5 stages: 90 p-values...
+- Randomization between stages to rule out bias
+
+
+*Paper*
+Problem statement: Can EEG be used as input for generative models such as text and image models to generate emotion-guided/ emotion-sensitive outputs?  
+Subquestion 1: Can EEG be used as a valid input for generative models to generate valence/arousal scores  
+Subquestion 2: Can generative models create emotion-sensitive outputs?
+
+Feedback: do not use seperate subquestions but only 1 research question!! And rather 2 different contributions
+
+contribution 1: proposition of framework with eeg as input for emotion guided generative model 
+contribution 2: tested the effectiveness of the framework (evaluated the framework) with a case study
+
+
+introduction
+    - context 
+    - current research
+    - state of the art
+- problem introduction
+    - HCI/ empathethic prompting etc. --> review paper HCI studies! 
+    - empathetic prompting - design task (why this prompting is meaningful for HCI). Why human emotion is important for generative AI. Add literature on this. 
+- literature review - Solve this problem
+    - eeg frmi, brain signals - as a tool for empathethic prompting
+    - intruction of generative models 
+    --> and their relationship
+    - user study to test effectiveness of this
+- Contributions
+    - framework 
+
+- discussion of empathetic prompting!!! 
+
+method
+- framework is your own work (not explain different models)
+- neural ned, formulations
+
+results
+- experimental design of results (using deap dataset)
+- model accuracy 
+- case study with participants and results
