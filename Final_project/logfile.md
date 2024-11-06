@@ -144,10 +144,10 @@ introduction
 - literature review - Solve this problem
     - eeg frmi, brain signals - as a tool for empathethic prompting
     - intruction of generative models 
-    --> and their relationship
-    - user study to test effectiveness of this
+    --> and their relationship  
 - Contributions
     - framework 
+    - user study to test effectiveness of this
 
 - discussion of empathetic prompting!!! 
 
